@@ -36,15 +36,14 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="48598505-6f6d-4975-a6d5-21afeb38fd65" object-ref="schemas/main/tables/auth_user" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="48598505-6f6d-4975-a6d5-21afeb38fd65" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="48598505-6f6d-4975-a6d5-21afeb38fd65" dataset="main.auth_user" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="48598505-6f6d-4975-a6d5-21afeb38fd65" dataset="main.api_prezent" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 
     'rest_framework',
+    'corsheaders',
 
     'api',
 ]
@@ -57,8 +58,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-]
+    'corsheaders.middleware.CorsMiddleware',
 
+]
+CORS_ORIGIN_ALLOW_ALL=True
 ROOT_URLCONF = 'Rest.urls'
 
 TEMPLATES = [
@@ -112,18 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
-
-REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ],
-
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
-}
-
 
 
 LANGUAGE_CODE = 'en-us'
