@@ -19,10 +19,6 @@ class SerializerPrezent(serializers.Serializer):
         return Prezent.objects.create(**validated_data)
 
 
-
-
-
-
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User

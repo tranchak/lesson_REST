@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
+
 <h1>Hello Stat</h1>
 <div id="root"></div>
 <form action="http://127.0.0.1:8000/prezent/"method="POST">
@@ -20,6 +22,10 @@
      return response.json()})
      .then(massage=>{ console.log(massage.message);
      for(let i of massage.message){ div.innerHTML+= `<p>${i.name}</p>` } })
+
 </script>
+
+
+
 </body>
 </html>

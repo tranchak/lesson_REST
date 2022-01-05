@@ -37,11 +37,14 @@ def get_prezent(request):
     # print(serialise.data)
     if request.method=='POST':
         print(request.POST)
-        serialize = PrezentSerializer(data=request.data)
-        serialize.is_valid()
-        # print(serialize.validated_data)
-        serialize.save()
+        if not all_present.filter(name=request.POST.get('name')):
 
+            serialize = PrezentSerializer(data=request.data)
+            serialize.is_valid()
+        # print(serialize.validated_data)
+            serialize.save()
+        else:
+            return Response({'message': 'Такой пользователь есть'})
     return Response({'message':serialise.data})
 
 @api_view(['GET','POST'])
